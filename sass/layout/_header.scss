@@ -1,0 +1,38 @@
+.menu-principal{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(30deg, $cor-3, $cor-2);
+
+    &__lista{
+    list-style-type: none;
+    display: flex;
+    justify-content:right;
+    position: absolute;
+    right: 30px;
+    top: 44%;
+    transform: translate(0, -50%);
+    }    
+
+    &__item{
+        text-decoration: none;
+        color: $cor-clara;
+        margin-left: 30px;
+        font-size: 17px;
+    }    
+    &__item:hover{ 
+    font-size: 18px;
+    transition: all 200ms ease;
+    }
+
+    &__item--principal{
+      color: $cor-clara;
+      font-weight: bold;
+      font-size: 18px;
+    }    
+    &__item--principal:hover{
+      font-size: 18px;
+    }   
+    }
