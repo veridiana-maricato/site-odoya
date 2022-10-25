@@ -8,6 +8,7 @@
 @import 'base/_normalize';
 
 // Components
+@import 'components/_buttons';
 @import 'components/_logo';
 @import 'components/_depoimentos';
 
@@ -21,3 +22,5 @@
 @import 'pages/_sobre';
 
 // Vendors
+@import 'vendors/_slick';
+@import 'vendors/_slick-theme';
