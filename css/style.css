@@ -357,6 +357,68 @@ template {
     font-style: italic;
     font-size: 16px; }
 
+.cover__image--contato {
+  background-image: url(/img/granola/colheres-ingredientes.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  height: 150vh;
+  position: relative;
+  max-width: 100%; }
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.form-group {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px; }
+
+.form__label {
+  color: #f8f4e3;
+  line-height: 35px; }
+
+.form__item {
+  width: 800px;
+  background-color: rgba(157, 190, 187, 0.7);
+  border-radius: 2px;
+  border: none;
+  padding-top: 15px;
+  color: #f8f4e3;
+  padding: 9px; }
+
+.form__container {
+  background: rgba(3, 25, 38, 0.7);
+  height: 450px;
+  width: 900px;
+  margin: 0 auto;
+  margin-top: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px; }
+
+.submit {
+  text-align: center;
+  margin-top: 9px; }
+
+#submit {
+  font-size: 15px;
+  color: #f8f4e3;
+  border-radius: 5px;
+  background: #031926;
+  padding: 7px;
+  text-transform: uppercase; }
+
+#submit:hover {
+  background: #468189;
+  scale: 1.03;
+  transition: all 200ms ease-out; }
+
 .menu-principal {
   z-index: 1;
   position: fixed;
@@ -421,6 +483,50 @@ template {
 .container {
   margin-left: 150px;
   margin-right: 150px; }
+
+.cover {
+  width: 100%; }
+  .cover__image--informacoes {
+    background-image: url(/img/granola/forno.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    height: 150vh;
+    position: relative;
+    max-width: 100%; }
+  .cover__image--receitas {
+    background-image: url(/img/granola/biscoito.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    height: 150vh;
+    position: relative;
+    max-width: 100%; }
+  .cover__image--sobre {
+    background-image: url(/img/granola/com-flores.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    height: 150vh;
+    position: relative;
+    max-width: 100%; }
+  .cover__image--pedido {
+    background-image: url(/img/granola/bowl.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    height: 150vh;
+    position: relative;
+    max-width: 100%; }
+  .cover__title {
+    color: rgba(248, 244, 227, 0.9);
+    font-size: 110px;
+    font-weight: lighter;
+    position: absolute;
+    top: 7%;
+    left: 10px;
+    width: 100%;
+    overflow: hidden; }
 
 .home-container {
   width: 100%;
