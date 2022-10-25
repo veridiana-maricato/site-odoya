@@ -1,0 +1,35 @@
+.depoimentos{
+    padding: 40px;
+    text-align: center;
+    background-color: red;
+
+    &__caixa{
+        padding-top: 40px;
+    }
+
+    &__item{
+        display: flex;
+        justify-content: center;  
+        flex-direction: column;
+
+        img{
+            width: 150px;
+            margin: 0 auto;
+        }
+        
+    }
+
+    &__texto{
+        color: blue;
+        font-style: italic;
+        font-size: 16px;
+        &::after{
+            content: '"';
+            font-size: 20px;
+        }
+        &::before{
+            content: '"';
+            font-size: 30px;
+        }
+    }
+}
