@@ -323,11 +323,16 @@ template {
   margin: 0 auto;
   color: #f8f4e3;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 20px;
   background: linear-gradient(30deg, #468189, #77aca2);
-  padding: 5px;
-  border-radius: 6px;
+  padding: 8px;
+  border-radius: 3px;
   border: 3px solid #468189; }
+
+.btn-pedido:hover {
+  background: linear-gradient(30deg, #175375, #468189);
+  scale: 1.05;
+  transition: all 100ms ease-out; }
 
 .logo img {
   max-width: 130px;
@@ -337,12 +342,13 @@ template {
 .depoimentos {
   padding: 40px;
   text-align: center;
-  background-color: #031926;
+  background-color: #175375;
   font-size: 20px;
   font-weight: lighter; }
   .depoimentos__titulo {
     color: #f8f4e3;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-top: 50px; }
   .depoimentos__caixa {
     padding-top: 40px; }
   .depoimentos__item {
@@ -351,14 +357,22 @@ template {
     flex-direction: column; }
     .depoimentos__item img {
       width: 150px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      margin-bottom: 35px; }
   .depoimentos__texto {
     color: #f8f4e3;
     font-style: italic;
     font-size: 16px; }
+  .depoimentos__texto::before {
+    content: '"'; }
+  .depoimentos__texto::after {
+    content: '"'; }
+  .depoimentos__pessoa {
+    color: #f8f4e3;
+    font-size: 16px; }
 
 .cover__image--contato {
-  background-image: url(/img/granola/colheres-ingredientes.jpg);
+  background-image: url(/img/granola/mesa-branca.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left center;
@@ -391,7 +405,7 @@ template {
   padding: 9px; }
 
 .form__container {
-  background: rgba(3, 25, 38, 0.7);
+  background: rgba(23, 83, 117, 0.7);
   height: 450px;
   width: 900px;
   margin: 0 auto;
@@ -410,7 +424,7 @@ template {
   font-size: 15px;
   color: #f8f4e3;
   border-radius: 5px;
-  background: #031926;
+  background: #175375;
   padding: 7px;
   text-transform: uppercase; }
 
@@ -418,6 +432,52 @@ template {
   background: #468189;
   scale: 1.03;
   transition: all 200ms ease-out; }
+
+.fazer-pedido {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  color: #175375; }
+  .fazer-pedido__item {
+    display: flex;
+    flex-direction: column; }
+  .fazer-pedido img {
+    max-height: 400px; }
+
+.dados {
+  width: 600px;
+  line-height: 30px; }
+  .dados__granola {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+
+.tipo {
+  width: 480px; }
+  .tipo option {
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    background: #f2f2f3;
+    padding-left: 100px; }
+
+.quantidade {
+  width: 100px; }
+
+.input {
+  color: #468189; }
+
+.option {
+  width: 480px; }
+
+.dados__granola__2 {
+  display: flex;
+  justify-content: space-between; }
+
+.hidden {
+  display: none; }
 
 .menu-principal {
   z-index: 1;
@@ -455,7 +515,6 @@ template {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 100px;
     background: #77aca2;
     padding: 80px; }
   .footer__column__title {
@@ -472,7 +531,7 @@ template {
     .footer__list__link:hover {
       text-decoration: underline; }
   .footer__linha2 {
-    background: #031926;
+    background: #175375;
     color: #f8f4e3;
     font-size: 13px;
     text-align: center;
@@ -495,7 +554,7 @@ template {
     position: relative;
     max-width: 100%; }
   .cover__image--receitas {
-    background-image: url(/img/granola/biscoito.jpg);
+    background-image: url(/img/granola/bolacha.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left center;
@@ -511,7 +570,7 @@ template {
     position: relative;
     max-width: 100%; }
   .cover__image--pedido {
-    background-image: url(/img/granola/bowl.jpeg);
+    background-image: url(/img/granola/granola-apenas.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left center;
@@ -550,7 +609,7 @@ template {
   font-weight: lighter; }
 
 .home-subtitle {
-  color: rgba(3, 25, 38, 0.5);
+  color: rgba(23, 83, 117, 0.5);
   font-size: 33px;
   font-weight: lighter;
   text-transform: uppercase; }
@@ -573,7 +632,58 @@ template {
   color: #468189; }
 
 .texto-home {
-  color: #031926; }
+  color: #175375;
+  width: 700px;
+  text-align: justify;
+  line-height: 25px; }
+
+.sobre-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1100px;
+  justify-content: space-between;
+  margin-top: -25px;
+  margin-bottom: 100px; }
+
+.sobre-home img {
+  width: 700px; }
+
+.receitas {
+  display: flex;
+  flex-direction: column; }
+  .receitas__item {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    gap: 100px;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 100px; }
+    .receitas__item img {
+      height: auto;
+      max-width: 500px;
+      max-height: 600px;
+      order: 2; }
+    .receitas__item__instrucoes {
+      color: #468189;
+      text-align: left;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column; }
+      .receitas__item__instrucoes__direita {
+        text-align: right;
+        order: 2;
+        color: #468189;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column; }
+    .receitas__item__titulo {
+      font-size: 25px;
+      text-transform: uppercase;
+      color: #468189;
+      line-height: 1px; }
 
 /* Slider */
 .slick-slider {

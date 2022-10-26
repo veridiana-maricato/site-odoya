@@ -21,3 +21,8 @@ $(document).ready(function(){
         autoplaySpeed: 3000,
     });
 })
+
+
+function teste(){
+    alert('funciona')
+}

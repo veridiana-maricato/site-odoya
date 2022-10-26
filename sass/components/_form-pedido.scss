@@ -1,0 +1,63 @@
+.fazer-pedido{
+display: flex;
+justify-content: space-around;
+margin-top: 100px;
+margin-bottom: 100px;
+color: $cor-4;
+
+&__item{
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    max-height: 400px;
+}
+
+}
+
+.dados{
+    width: 600px;
+    line-height: 30px;
+
+    &__granola{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.tipo{
+    width: 480px;
+
+    option{
+        width: 250px;
+        height: 50px;
+        font-size: 20px;
+        background: #f2f2f3;
+        padding-left: 100px
+    }
+}
+
+.quantidade{
+    width: 100px;
+}
+
+.input{
+    color: $cor-3;
+}
+
+.option{
+    width: 480px;
+}
+
+.dados__granola__2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden{
+    display: none;
+}
+

@@ -5,9 +5,11 @@
     font-size: 20px;
     font-weight: lighter;
 
+
     &__titulo{
         color: $cor-clara;
         text-transform: uppercase;
+        margin-top:50px
     }
 
     &__caixa{
@@ -22,6 +24,7 @@
         img{
             width: 150px;
             margin: 0 auto;
+            margin-bottom: 35px;
         }        
     }
 
@@ -30,5 +33,17 @@
         font-style: italic;
         font-size: 16px;
         }
+        &__texto::before{
+            content: '"';
+        }
+        
+        &__texto::after{
+            content: '"';
+        }
+        
+    &__pessoa{
+        color: $cor-clara;
+        font-size: 16px;
+    }
 }
 

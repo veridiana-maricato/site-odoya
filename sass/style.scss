@@ -13,16 +13,18 @@
 @import 'components/_logo';
 @import 'components/_depoimentos';
 @import 'components/_form';
+@import 'components/_form-pedido';
 
 // Layout
 @import 'layout/_header';
 @import 'layout/_footer';
 @import 'layout/_container';
-@import 'layout/_capas';
+@import 'layout/_covers';
 
 // Pages
 @import 'pages/_home';
 @import 'pages/_sobre';
+@import 'pages/_receitas';
 
 // Vendors
 @import 'vendors/_slick';

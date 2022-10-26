@@ -29,8 +29,55 @@
         <div class="cover">
             <div class="cover__image--pedido">
                 <h1 class="cover__title">GRA <br>NOL <br>A <br><br>ODO<br>YÁ</h1>
-            </div>                                
+            </div> 
         </div>
+        <section class="fazer-pedido container">
+            <img src="img/granola-embalada.png" alt="Granola">
+            <div class="dados">
+                <div class="dados__granola">
+                    <div class="fazer-pedido__item tipo">
+                        <label class="input"  for="tipo">Tipo</label>
+                            <select class="input" id="mySelect" onchange="teste()">
+                                <option class="option" value="Selecione">Selecione</option>
+                                <option class="option" value="Doce">Doce</option>
+                                <option class="option" value="Salgada">Salgada</option>
+                            </select>              
+                    </div>                    
+                    <div class="fazer-pedido__item quantidade">
+                        <label for="quantidade">Quantidade</label>
+                        <input class="input" type="number" min="1" max="50">
+                    </div>     
+                </div>
+                <div class="dados__granola__2">
+                    <div class="fazer-pedido__item tipo">
+                        <label class="input"  for="tipo">Tipo</label>
+                            <select class="input" id="mySelect">
+                                <option class="option" value="n">Selecione</option>
+                                <option class="option" value="d">Doce</option>
+                                <option class="option" value="s">Salgada</option>
+                            </select>              
+                    </div>                    
+                    <div class="fazer-pedido__item quantidade">
+                        <label for="quantidade">Quantidade</label>
+                        <input class="input" type="number" min="1" max="50">
+                    </div>     
+                </div>
+                <div class="dados__cliente">
+                    <div class="fazer-pedido__item">
+                        <label for="name">Nome</label>
+                        <input class="input" type="name">
+                    </div>
+                    <div class="fazer-pedido__item">
+                        <label for="email">E-mail</label>
+                        <input class="input" type="email">
+                    </div>
+                    <div class="fazer-pedido__item">
+                        <label for="mensagem">Observações</label>
+                        <textarea class="input" name="mensagem" id="mensagem" cols="30" rows="10">(opcional)</textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer__linha1">

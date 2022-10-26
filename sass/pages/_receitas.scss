@@ -1,0 +1,47 @@
+.receitas{
+    display: flex;
+    flex-direction: column;
+
+    &__item{
+        display: flex;
+        flex-direction: row;
+        width: 1000px;
+        gap: 100px;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 80px;
+        margin-bottom: 100px;
+
+        img{            
+            height: auto;
+            max-width: 500px;
+            max-height: 600px;
+            order: 2;
+        }
+
+        &__instrucoes{
+            color: $cor-3;
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            &__direita{
+            text-align: right;
+            order: 2;
+            color: $cor-3;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            }
+            
+        }
+
+        &__titulo{
+            font-size: 25px;
+            text-transform: uppercase;
+            color: $cor-3;
+            line-height: 1px;
+        }
+    }
+}

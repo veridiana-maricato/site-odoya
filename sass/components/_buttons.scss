@@ -7,9 +7,14 @@ margin: 50px;
     margin: 0 auto;
     color: $cor-clara;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 20px;
     background: linear-gradient(30deg, $cor-3, $cor-2);
-    padding: 5px;
-    border-radius: 6px;
+    padding: 8px;
+    border-radius: 3px;
     border: 3px solid $cor-3;
+}
+.btn-pedido:hover{
+    background: linear-gradient(30deg, $cor-4, $cor-3);
+    scale: 1.05;
+    transition: all 100ms ease-out;    
 }
