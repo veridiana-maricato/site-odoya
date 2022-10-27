@@ -12,9 +12,35 @@ margin: 50px;
     padding: 8px;
     border-radius: 3px;
     border: 3px solid $cor-3;
+    text-align: center;
 }
 .btn-pedido:hover{
     background: linear-gradient(30deg, $cor-4, $cor-3);
     scale: 1.05;
     transition: all 100ms ease-out;    
 }
+
+
+.submit-pedido{
+    color: $cor-clara;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border: 1px solid $cor-4;
+    background: $cor-3;
+    padding: 1px;
+    border-radius: 5px;
+ }
+ .submit-pedido:hover{
+    scale: 1.01;
+    transition: all 200ms ease;
+    cursor: pointer;
+ }
+
+ .submit-pedido:disabled{
+    cursor:not-allowed;
+    background: $cor-1;
+ }
+

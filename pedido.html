@@ -8,23 +8,27 @@
     <title>Pedidos</title>
 </head>
 <body>
-    <header class="menu-principal">
-        <div class="logo">
-            <img src="/img/logo-branco.png" alt="Logo da Odoyá">
-        </div>
-        <div>
-            <nav>
-                <ul class="menu-principal__lista">
-                    <li><a class="menu-principal__item" href="home.html">Home</a></li>
-                    <li><a class="menu-principal__item" href="sobre.html">Sobre a Odoyá</a></li>
-                    <li><a class="menu-principal__item" href="informacoes.html">A granola</a></li>
-                    <li><a class="menu-principal__item menu-principal__item--principal" href="pedido.html">Peça a sua</a></li>
-                    <li><a class="menu-principal__item" href="receitas.html">Receitas</a></li>
-                    <li><a class="menu-principal__item" href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+     <!-- header -->
+     <div class="container-header">
+        <header class="menu-principal">
+            <div class="logo">
+                <img src="/img/logo-branco.png" alt="Logo da Odoyá">
+            </div>
+            <div>
+                <nav>
+                    <ul class="menu-principal__lista">
+                        <li><a class="menu-principal__item" href="home.html">Home</a></li>
+                        <li><a class="menu-principal__item" href="sobre.html">Sobre a Odoyá</a></li>
+                        <li><a class="menu-principal__item" href="informacoes.html">A granola</a></li>
+                        <li><a class="menu-principal__item menu-principal__item--principal" href="pedido.html">Peça a sua</a></li>
+                        <li><a class="menu-principal__item" href="receitas.html">Receitas</a></li>
+                        <li><a class="menu-principal__item" href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+        <!-- FIM header --> 
     <main>
         <div class="cover">
             <div class="cover__image--pedido">
@@ -34,24 +38,26 @@
         <section class="fazer-pedido container">
             <img src="img/granola-embalada.png" alt="Granola">
             <div class="dados">
+                <!-- Dados sobre o produto -->
                 <div class="dados__granola">
                     <div class="fazer-pedido__item tipo">
-                        <label class="input"  for="tipo">Tipo</label>
-                            <select class="input" id="mySelect" onchange="teste()">
-                                <option class="option" value="Selecione">Selecione</option>
+                        <label class="input" for="tipo">Tipo</label>
+                            <select class="input tipo-espaco" onchange="removeClass(this.value)">
+                                <option id="selecione" class="option" value="Selecione">Selecione</option>
                                 <option class="option" value="Doce">Doce</option>
                                 <option class="option" value="Salgada">Salgada</option>
                             </select>              
                     </div>                    
                     <div class="fazer-pedido__item quantidade">
                         <label for="quantidade">Quantidade</label>
-                        <input class="input" type="number" min="1" max="50">
+                        <input id="quantidade-granola" class="input" type="number" min="1" max="50">
                     </div>     
                 </div>
-                <div class="dados__granola__2">
+                <!-- Se quiser mais de um tipo de granola, surge uma nova opcao -->
+                <div class="dados__granola__2 hidden">
                     <div class="fazer-pedido__item tipo">
-                        <label class="input"  for="tipo">Tipo</label>
-                            <select class="input" id="mySelect">
+                        <label class="input" for="tipo">Tipo</label>
+                            <select class="input tipo-espaco">
                                 <option class="option" value="n">Selecione</option>
                                 <option class="option" value="d">Doce</option>
                                 <option class="option" value="s">Salgada</option>
@@ -59,25 +65,26 @@
                     </div>                    
                     <div class="fazer-pedido__item quantidade">
                         <label for="quantidade">Quantidade</label>
-                        <input class="input" type="number" min="1" max="50">
+                        <input value="0" class="input" type="number" min="0" max="50">
                     </div>     
                 </div>
+                <!-- Dados do cliente -->
                 <div class="dados__cliente">
                     <div class="fazer-pedido__item">
                         <label for="name">Nome</label>
-                        <input class="input" type="name">
+                        <input id="name" class="input" type="name">
                     </div>
                     <div class="fazer-pedido__item">
                         <label for="email">E-mail</label>
-                        <input class="input" type="email">
+                        <input id="email" class="input" type="email">
                     </div>
                     <div class="fazer-pedido__item">
                         <label for="mensagem">Observações</label>
-                        <textarea class="input" name="mensagem" id="mensagem" cols="30" rows="10">(opcional)</textarea>
+                        <textarea class="input" name="mensagem" id="mensagem" cols="30" rows="4" placeholder="(opcional)"></textarea>
                     </div>
-                </div>
-            </div>
-        </section>
+                </div>     
+                <button id="btnContinuar" class="submit-pedido" disabled="true" onclick="irParaEndereco()">Continuar</button>
+           </section>
     </main>
     <footer class="footer">
         <div class="footer__linha1">
@@ -113,6 +120,6 @@
 </footer>    
 <script type="module" src="/js/jquery.js"></script>
 <script type="module" src="/js/slick.min.js"></script>
-<script type="module" src="/js/home.js"></script>
+<script type="text/javascript" src="/js/home.js"></script>
 </body> 
 </html>

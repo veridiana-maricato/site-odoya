@@ -29,19 +29,13 @@ img{
 }
 
 .tipo{
-    width: 480px;
-
-    option{
-        width: 250px;
-        height: 50px;
-        font-size: 20px;
-        background: #f2f2f3;
-        padding-left: 100px
-    }
+    flex-grow: 4;
+    padding-right: 10px;
+  
 }
 
 .quantidade{
-    width: 100px;
+    flex-grow: 1;
 }
 
 .input{
@@ -61,3 +55,10 @@ img{
     display: none;
 }
 
+.vermelho{
+    background-color: red;
+}
+
+.tipo-espaco{
+    height: 24px;
+}

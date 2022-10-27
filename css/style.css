@@ -327,12 +327,34 @@ template {
   background: linear-gradient(30deg, #468189, #77aca2);
   padding: 8px;
   border-radius: 3px;
-  border: 3px solid #468189; }
+  border: 3px solid #468189;
+  text-align: center; }
 
 .btn-pedido:hover {
   background: linear-gradient(30deg, #175375, #468189);
   scale: 1.05;
   transition: all 100ms ease-out; }
+
+.submit-pedido {
+  color: #f8f4e3;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  border: 1px solid #175375;
+  background: #468189;
+  padding: 1px;
+  border-radius: 5px; }
+
+.submit-pedido:hover {
+  scale: 1.01;
+  transition: all 200ms ease;
+  cursor: pointer; }
+
+.submit-pedido:disabled {
+  cursor: not-allowed;
+  background: #9dbebb; }
 
 .logo img {
   max-width: 130px;
@@ -455,16 +477,11 @@ template {
     flex-wrap: wrap; }
 
 .tipo {
-  width: 480px; }
-  .tipo option {
-    width: 250px;
-    height: 50px;
-    font-size: 20px;
-    background: #f2f2f3;
-    padding-left: 100px; }
+  flex-grow: 4;
+  padding-right: 10px; }
 
 .quantidade {
-  width: 100px; }
+  flex-grow: 1; }
 
 .input {
   color: #468189; }
@@ -478,6 +495,12 @@ template {
 
 .hidden {
   display: none; }
+
+.vermelho {
+  background-color: red; }
+
+.tipo-espaco {
+  height: 24px; }
 
 .menu-principal {
   z-index: 1;
@@ -542,6 +565,11 @@ template {
 .container {
   margin-left: 150px;
   margin-right: 150px; }
+
+.container-header {
+  display: block;
+  background-color: red;
+  height: 100px; }
 
 .cover {
   width: 100%; }
@@ -684,6 +712,44 @@ template {
       text-transform: uppercase;
       color: #468189;
       line-height: 1px; }
+
+.endereco {
+  display: flex;
+  flex-direction: column;
+  height: 1000vh; }
+
+.pagina-endereco {
+  display: block;
+  margin: 100px;
+  color: #175375; }
+
+.title__endereco {
+  text-transform: uppercase;
+  color: #175375; }
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px; }
+
+#txtNumero input::-webkit-outer-spin-button,
+#txtNumero input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input:focus::-webkit-input-placeholder {
+  color: transparent; }
+
+input:focus:-moz-placeholder {
+  /* Firefox 18- */
+  color: transparent; }
+
+input:focus::-moz-placeholder {
+  /* Firefox 19+ */
+  color: transparent; }
+
+input:focus:-ms-input-placeholder {
+  color: transparent; }
 
 /* Slider */
 .slick-slider {

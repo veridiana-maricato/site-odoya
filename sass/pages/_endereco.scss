@@ -1,0 +1,43 @@
+.endereco{
+    display: flex;
+    flex-direction: column;
+    height: 1000vh;
+}
+
+.pagina-endereco{
+    display: block;
+    margin: 100px;
+    color: $cor-4;
+}
+
+.title__endereco{
+    text-transform: uppercase;
+    color: $cor-4;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#txtNumero{
+    input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+ }
+ input:focus:-moz-placeholder { /* Firefox 18- */
+    color: transparent;  
+ }
+ input:focus::-moz-placeholder {  /* Firefox 19+ */
+    color: transparent;  
+ }
+ input:focus:-ms-input-placeholder {  
+    color: transparent;  
+ }
