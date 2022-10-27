@@ -46,8 +46,6 @@ function buscaCep(){
                 document.querySelector('#txtBairro').value = endereco.neighborhood;
                 document.querySelector('#txtCidade').value = endereco.city;
                 document.querySelector('#txtEstado').value = endereco.state;
-                document.getElementById("btnPagamento").disabled = false
-
             }
             else if(req.status === 404){
                 alert("CEP invalido!")
@@ -65,27 +63,24 @@ window.onload = function(){
 }
 
 
-// Ir para o endereco
-function checkInputs(inputs) {
+// Checar se inputs obrigatórios estão preenchidos
+function checkMandatoryInputs(mandatoryInput) {    
     var filled = true;
     
-    inputs.forEach(function(input) {
-        
+    mandatoryInput.forEach(function(input) {        
       if(input.value === "") {
           filled = false;
-      }
-    
-    });
-    
+      }    
+    });    
     return filled;
     
   }
-  var inputs = document.querySelectorAll("input");
+  var mandatoryInput = document.querySelectorAll(".mandatoryInput");
   var button = document.querySelector("button");
-  inputs.forEach(function(input) {
+  mandatoryInput.forEach(function(input) {
       
     input.addEventListener("keyup", function() {
-      if(checkInputs(inputs)) {
+      if(checkMandatoryInputs(mandatoryInput)) {
         button.disabled = false;
       } else {
         button.disabled = true;
@@ -93,10 +88,11 @@ function checkInputs(inputs) {
     });
   });
 
+  // Ir para endereço
+
   function irParaEndereco(){
     window.location.href = "/endereco.html"
   }
-
 
 // Ir para pagamento
 function irParaPagamento(){
@@ -109,5 +105,28 @@ function irParaPagamento(){
     }
 }
 
+//Checar se e-mail e verdadeiro
+   
+  function checkEmail(){
+  if( document.forms[0].email.value=="" 
+     || document.forms[0].email.value.indexOf('@')==-1 
+       || document.forms[0].email.value.indexOf('.')==-1 )
+      {
+         alert( "Por favor, informe um e-mail válido" );        
+         button.disabled = true;
+         return false
+      }
+      else{
+        button.disabled = false
+      }
+  }
 
-
+  // Ver se colocou algo no lugar do e-mail (por enquanto não precisa porque o botão só ativa se tiver preenchido todos os mandatoryInputs)
+  // function verifyEmail() {
+//     if (document.forms[0].email.value.length == 0) {
+//       alert('Por favor, informe o seu e-mail');
+//       document.sendForm.email.focus();
+//       return false;
+//     }
+//     return true;
+//   }

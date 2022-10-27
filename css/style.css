@@ -335,16 +335,17 @@ template {
   scale: 1.05;
   transition: all 100ms ease-out; }
 
+.submit-container {
+  text-align: center; }
+
 .submit-pedido {
   color: #f8f4e3;
   text-align: center;
   text-decoration: none;
-  display: flex;
-  justify-content: center;
   margin-top: 20px;
   border: 1px solid #175375;
   background: #468189;
-  padding: 1px;
+  padding: 10px;
   border-radius: 5px; }
 
 .submit-pedido:hover {
@@ -355,6 +356,11 @@ template {
 .submit-pedido:disabled {
   cursor: not-allowed;
   background: #9dbebb; }
+
+#txtNumero::-webkit-outer-spin-button,
+#txtNumero::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
 
 .logo img {
   max-width: 130px;
@@ -716,21 +722,145 @@ template {
 .endereco {
   display: flex;
   flex-direction: column;
-  height: 1000vh; }
+  align-items: center; }
+  .endereco__title {
+    text-transform: uppercase;
+    width: 500px;
+    font-size: 30px;
+    text-align: center; }
+    @media (max-width: 992px) {
+      .endereco__title {
+        font-size: 25px; } }
+    @media (max-width: 768px) {
+      .endereco__title {
+        font-size: 22px; } }
+    @media (max-width: 576px) {
+      .endereco__title {
+        font-size: 18px;
+        width: 220px; } }
+  .endereco__form {
+    display: flex;
+    flex-direction: column;
+    width: 820px; }
+    @media (max-width: 992px) {
+      .endereco__form {
+        width: 620px; } }
+    @media (max-width: 768px) {
+      .endereco__form {
+        width: 420px; } }
+    @media (max-width: 576px) {
+      .endereco__form {
+        width: 220px; } }
+
+.small-elements {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+#txtCep {
+  width: 200px; }
+  @media (max-width: 992px) {
+    #txtCep {
+      width: 150px; } }
+  @media (max-width: 768px) {
+    #txtCep {
+      width: 100px; } }
+  @media (max-width: 576px) {
+    #txtCep {
+      width: 220px; } }
+
+#txtRua {
+  width: 600px; }
+  @media (max-width: 992px) {
+    #txtRua {
+      width: 450px; } }
+  @media (max-width: 768px) {
+    #txtRua {
+      width: 300px; } }
+  @media (max-width: 576px) {
+    #txtRua {
+      width: 220px; } }
+
+#txtNumero {
+  width: 130px; }
+  @media (max-width: 992px) {
+    #txtNumero {
+      width: 90px; } }
+  @media (max-width: 768px) {
+    #txtNumero {
+      width: 80px; } }
+  @media (max-width: 576px) {
+    #txtNumero {
+      width: 220px; } }
+
+#txtComplemento {
+  width: 270px; }
+  @media (max-width: 992px) {
+    #txtComplemento {
+      width: 200px; } }
+  @media (max-width: 768px) {
+    #txtComplemento {
+      width: 130px; } }
+  @media (max-width: 576px) {
+    #txtComplemento {
+      width: 220px; } }
+
+#txtBairro {
+  width: 400px; }
+  @media (max-width: 992px) {
+    #txtBairro {
+      width: 300px; } }
+  @media (max-width: 768px) {
+    #txtBairro {
+      width: 190px; } }
+  @media (max-width: 576px) {
+    #txtBairro {
+      width: 220px; } }
+
+#txtCidade {
+  width: 400px; }
+  @media (max-width: 992px) {
+    #txtCidade {
+      width: 300px; } }
+  @media (max-width: 768px) {
+    #txtCidade {
+      width: 200px; } }
+  @media (max-width: 576px) {
+    #txtCidade {
+      width: 220px; } }
+
+#txtEstado {
+  width: 400px;
+  flex-shrink: 2;
+  flex-grow: 2; }
+  @media (max-width: 992px) {
+    #txtEstado {
+      width: 300px; } }
+  @media (max-width: 768px) {
+    #txtEstado {
+      width: 200px; } }
+  @media (max-width: 576px) {
+    #txtEstado {
+      width: 220px; } }
 
 .pagina-endereco {
   display: block;
   margin: 100px;
   color: #175375; }
 
-.title__endereco {
-  text-transform: uppercase;
-  color: #175375; }
-
 .input-field {
   display: flex;
   flex-direction: column;
-  margin-top: 20px; }
+  margin-top: 30px;
+  margin-bottom: 10px; }
+
+.input-field input {
+  box-shadow: 1px 1px rgba(23, 83, 117, 0.5);
+  border: 1px solid rgba(23, 83, 117, 0.4);
+  border-radius: 2px;
+  margin-top: 1px;
+  width: 100%;
+  height: 30px; }
 
 #txtNumero input::-webkit-outer-spin-button,
 #txtNumero input::-webkit-inner-spin-button {

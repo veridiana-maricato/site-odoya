@@ -43,14 +43,14 @@
                     <div class="fazer-pedido__item tipo">
                         <label class="input" for="tipo">Tipo</label>
                             <select class="input tipo-espaco" onchange="removeClass(this.value)">
-                                <option id="selecione" class="option" value="Selecione">Selecione</option>
-                                <option class="option" value="Doce">Doce</option>
-                                <option class="option" value="Salgada">Salgada</option>
+                                <option id="selecione" class="option" value="" disabled selected>Selecione</option>
+                                <option class="option mandatoryInput" value="Doce">Doce</option>
+                                <option class="option mandatoryInput" value="Salgada">Salgada</option>
                             </select>              
                     </div>                    
                     <div class="fazer-pedido__item quantidade">
                         <label for="quantidade">Quantidade</label>
-                        <input id="quantidade-granola" class="input" type="number" min="1" max="50">
+                        <input id="quantidade-granola" class="input mandatoryInput" type="number" min="1" max="50">
                     </div>     
                 </div>
                 <!-- Se quiser mais de um tipo de granola, surge uma nova opcao -->
@@ -58,7 +58,8 @@
                     <div class="fazer-pedido__item tipo">
                         <label class="input" for="tipo">Tipo</label>
                             <select class="input tipo-espaco">
-                                <option class="option" value="n">Selecione</option>
+                                <option class="option" value="" disabled selected>Quer pedir mais de um sabor?</option>
+                                <option class="option" value="n">Não, obrigada</option>
                                 <option class="option" value="d">Doce</option>
                                 <option class="option" value="s">Salgada</option>
                             </select>              
@@ -72,18 +73,20 @@
                 <div class="dados__cliente">
                     <div class="fazer-pedido__item">
                         <label for="name">Nome</label>
-                        <input id="name" class="input" type="name">
+                        <input id="name" class="input mandatoryInput" type="name">
                     </div>
-                    <div class="fazer-pedido__item">
-                        <label for="email">E-mail</label>
-                        <input id="email" class="input" type="email">
-                    </div>
+                    <form class="fazer-pedido__item" method="post" action="" onSubmit="return(verifyEmail())" name="sendForm">
+                        <label for="email">E-mail: </label>
+                        <input name="email" type="text" class="input mandatoryInput" id="email" onblur="checkEmail();"/>
+                    </form>                 
                     <div class="fazer-pedido__item">
                         <label for="mensagem">Observações</label>
                         <textarea class="input" name="mensagem" id="mensagem" cols="30" rows="4" placeholder="(opcional)"></textarea>
                     </div>
-                </div>     
-                <button id="btnContinuar" class="submit-pedido" disabled="true" onclick="irParaEndereco()">Continuar</button>
+                </div> 
+                <div class="submit-container">
+                    <button id="btnContinuar" class="submit-pedido" disabled="true" onclick="irParaEndereco()">Continuar</button>
+                </div>    
            </section>
     </main>
     <footer class="footer">

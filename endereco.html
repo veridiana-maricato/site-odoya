@@ -31,51 +31,47 @@
     <!-- Fim do header -->
     <!-- Main -->
     <main class="pagina-endereco">
-        <section class="endereco">
-            <h2 class="title__endereco">Insira seu endereco</h2>
-            <div class="row">
-                <div class="input-field">
-                    <label for="txtCep">CEP</label>
-                    <input type="text" id="txtCep" name="cep">
+        <section class="endereco container">
+            <h2 class="endereco__title">Insira seu endereço</h2>
+            <form class="endereco__form" method="post" action="">
+                <div class="small-elements">
+                    <div class="input-field">                        
+                            <label for="txtCep">CEP</label>
+                            <input class="mandatoryInput" type="text" id="txtCep" name="cep">                        
+                    </div>
+                    <div class="input-field">                        
+                            <label for="txtRua">Rua</label>
+                            <input class="mandatoryInput" type="text" id="txtRua" name="rua">                        
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field">
-                    <label for="txtRua">Rua</label>
-                    <input type="text" id="txtRua" name="rua">
+                <div class="small-elements">
+                    <div class="input-field">                        
+                            <label for="txtNumero">Numero</label>
+                            <input class="mandatoryInput" type="number" id="txtNumero" name="numero">                        
+                    </div>
+                    <div class="input-field">                        
+                            <label for="txtComplemento">Complemento</label>
+                            <input type="text" id="txtComplemento" name="complemento" placeholder="apartamento, bloco, etc.">                        
+                    </div>
+                    <div class="input-field">                        
+                            <label for="txtBairro">Bairro</label>
+                            <input class="mandatoryInput" type="text" id="txtBairro" name="bairro">
+                        </div>                    
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field">
-                    <label for="txtNumero">Numero</label>
-                    <input type="number" id="txtNumero" name="numero">
+                <div class="small-elements">
+                    <div class="input-field">                        
+                            <label for="txtCidade">Cidade</label>
+                            <input class="mandatoryInput" type="text" id="txtCidade" name="cidade">
+                    </div>
+                    <div class="input-field">                        
+                            <label for="txtEstado">Estado</label>
+                            <input class="mandatoryInput" type="text" id="txtEstado" name="Estado">
+                        </div>                    
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field">
-                    <label for="txtComplemento">Complemento</label>
-                    <input value="Apartamento, bloco, etc." type="text" id="txtComplemento" name="complemento" placeholder="apartamento, bloco, etc.">
+                <div class="submit-container">
+                    <button id="btnPagamento" class="submit-pedido" disabled="true" onclick="irParaPagamento()">Ir para pagamento</button>
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field">
-                    <label for="txtBairro">Bairro</label>
-                    <input type="text" id="txtBairro" name="bairro">
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field">
-                    <label for="txtCidade">Cidade</label>
-                    <input type="text" id="txtCidade" name="cidade">
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field">
-                    <label for="txtEstado">Estado</label>
-                    <input type="text" id="txtEstado" name="Estado">
-                </div>
-            </div>
-            <button id="btnPagamento" class="submit-pedido" disabled="true" onclick="irParaPagamento()">Ir para pagamento</button>
+            </form>
         </section>
     </main>
 
