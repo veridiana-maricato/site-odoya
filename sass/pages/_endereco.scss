@@ -5,14 +5,16 @@
 
     &__title{
         text-transform: uppercase;
-        width: 500px;
+        width: 820px;
         font-size: 30px;
         text-align: center;
         @media(max-width: $breakpoint-lg){
             font-size: 25px;
+            width: 620px;    
         }
         @media(max-width: $breakpoint-md){
             font-size: 22px;
+            width: 420px;    
         }
         @media(max-width: $breakpoint-sm){
             font-size: 18px;
@@ -124,6 +126,21 @@
     }
     @media(max-width: $breakpoint-md){
         width: 200px;
+    }
+    @media(max-width: $breakpoint-sm){
+        width: 220px;
+    }
+}
+
+#dados{
+    width: 820px;
+    flex-shrink: 2;
+    flex-grow: 2;
+    @media(max-width: $breakpoint-lg){
+        width: 620px;        
+    }
+    @media(max-width: $breakpoint-md){
+        width: 420px;
     }
     @media(max-width: $breakpoint-sm){
         width: 220px;

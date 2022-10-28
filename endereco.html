@@ -68,8 +68,15 @@
                             <input class="mandatoryInput" type="text" id="txtEstado" name="Estado">
                         </div>                    
                 </div>
+                <div class="dados">
+                    <div class="input-field"> 
+                        <h2 class="endereco__title">Dados de cobranca</h2>  
+                        <label for="dados">Insira CPF ou CNPJ</label>
+                        <input value="dados" id="dados" class="mandatoryInput" type="number" placeholder="CPF ou CNPJ">
+                    </div>
+                </div>
                 <div class="submit-container">
-                    <button id="btnPagamento" class="submit-pedido" disabled="true" onclick="irParaPagamento()">Ir para pagamento</button>
+                    <button id="btnPagamento" class="submit-pedido" disabled="true" onclick="checarEIrParaPagamento()">Ir para pagamento</button>
                 </div>
             </form>
         </section>

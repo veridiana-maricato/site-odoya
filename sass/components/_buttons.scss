@@ -50,4 +50,9 @@ margin: 50px;
         -webkit-appearance: none;
         margin: 0;
     }
+#dados::-webkit-outer-spin-button,
+   #dados::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 

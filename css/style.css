@@ -362,6 +362,11 @@ template {
   -webkit-appearance: none;
   margin: 0; }
 
+#dados::-webkit-outer-spin-button,
+#dados::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
 .logo img {
   max-width: 130px;
   margin-left: 30px;
@@ -507,6 +512,15 @@ template {
 
 .tipo-espaco {
   height: 24px; }
+
+.metodo {
+  max-height: 30vh; }
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 10px; }
 
 .menu-principal {
   z-index: 1;
@@ -725,15 +739,17 @@ template {
   align-items: center; }
   .endereco__title {
     text-transform: uppercase;
-    width: 500px;
+    width: 820px;
     font-size: 30px;
     text-align: center; }
     @media (max-width: 992px) {
       .endereco__title {
-        font-size: 25px; } }
+        font-size: 25px;
+        width: 620px; } }
     @media (max-width: 768px) {
       .endereco__title {
-        font-size: 22px; } }
+        font-size: 22px;
+        width: 420px; } }
     @media (max-width: 576px) {
       .endereco__title {
         font-size: 18px;
@@ -841,6 +857,20 @@ template {
       width: 200px; } }
   @media (max-width: 576px) {
     #txtEstado {
+      width: 220px; } }
+
+#dados {
+  width: 820px;
+  flex-shrink: 2;
+  flex-grow: 2; }
+  @media (max-width: 992px) {
+    #dados {
+      width: 620px; } }
+  @media (max-width: 768px) {
+    #dados {
+      width: 420px; } }
+  @media (max-width: 576px) {
+    #dados {
       width: 220px; } }
 
 .pagina-endereco {

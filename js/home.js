@@ -31,35 +31,35 @@ function removeClass(value){
 
 // CEP
 function buscaCep(){
-    var cep = document.querySelector('#txtCep').value;
-    if(cep !==""){
-        var url = "https://brasilapi.com.br/api/cep/v1/" + cep;
-        var req = new XMLHttpRequest();
-        req.open('GET', url);
-        req.send();
+  var cep = document.querySelector('#txtCep').value;
+  if(cep !==""){
+      var url = "https://brasilapi.com.br/api/cep/v1/" + cep;
+      var req = new XMLHttpRequest();
+      req.open('GET', url);
+      req.send();
 
-        // resposta da requisicao
-        req.onload = function() {
-            if(req.status === 200){
-                var endereco = JSON.parse(req.response)
-                document.querySelector('#txtRua').value = endereco.street;
-                document.querySelector('#txtBairro').value = endereco.neighborhood;
-                document.querySelector('#txtCidade').value = endereco.city;
-                document.querySelector('#txtEstado').value = endereco.state;
-            }
-            else if(req.status === 404){
-                alert("CEP invalido!")
-            }
-            else{
-                alert('Erro')
-            }
-        }
-    }
+      // resposta da requisicao
+      req.onload = function() {
+          if(req.status === 200){
+              var endereco = JSON.parse(req.response)
+              document.querySelector('#txtRua').value = endereco.street;
+              document.querySelector('#txtBairro').value = endereco.neighborhood;
+              document.querySelector('#txtCidade').value = endereco.city;
+              document.querySelector('#txtEstado').value = endereco.state;
+          }
+          else if(req.status === 404){
+              alert("CEP invalido!")
+          }
+          else{
+              alert('Erro')
+          }
+      }
+  }
 }
 
 window.onload = function(){
-    var txtCep = document.querySelector('#txtCep');
-    txtCep.addEventListener('blur', buscaCep)
+  var txtCep = document.querySelector('#txtCep');
+  txtCep.addEventListener('blur', buscaCep)
 }
 
 
@@ -94,16 +94,6 @@ function checkMandatoryInputs(mandatoryInput) {
     window.location.href = "/endereco.html"
   }
 
-// Ir para pagamento
-function irParaPagamento(){
-    let num = document.querySelector('#txtNumero').value
-    if(num !==""){
-        window.location.href = "/pagamento.html";
-    }
-    else{
-        alert("Insira um numero valido.")
-    }
-}
 
 //Checar se e-mail e verdadeiro
    
@@ -120,6 +110,64 @@ function irParaPagamento(){
         button.disabled = false
       }
   }
+
+// PIX
+
+function removeClassPix(value){
+  if(value == 'pix'){
+      document.querySelector('.pix').classList.toggle('hidden')
+      document.querySelector('.cartao').classList.add('hidden')
+
+  }
+}
+function removeClassCartao(value){
+  if(value == 'cartao'){
+      document.querySelector('.cartao').classList.toggle('hidden')
+  }document.querySelector('.pix').classList.add('hidden')
+}
+
+
+
+// checar CPF ou CNPJ valido
+
+// Ir para pagamento
+function checkNumber(){
+  let num = document.querySelector('#txtNumero').value
+  if(num > 9999){
+     alert("Insira um número válido.")     
+  }
+}
+
+function checkDados(){
+  var txtDados = document.querySelector('#dados').value
+  if(txtDados < 9999999999)
+   {
+      alert("Por favor, informe um CPF ou CNPJ válido" );        
+      button.disabled = true;
+      return false
+}
+}
+  
+function checarEIrParaPagamento(){
+  checkDados();
+  checkNumber(); 
+  window.location.href('/pagamento.html') 
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // Ver se colocou algo no lugar do e-mail (por enquanto não precisa porque o botão só ativa se tiver preenchido todos os mandatoryInputs)
   // function verifyEmail() {

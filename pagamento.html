@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Endereco</title>
+    <title>Pagamento</title>
 </head>
 <body>
     <!-- Header -->
@@ -31,7 +31,26 @@
     <!-- Fim do header -->
     <!-- Main -->
     <main class="pagina-pagamento">
-       
+        <div class="container">
+            <!-- metodos de pagamento -->
+            <form action="#" class="pagamento">
+                <div class="metodo">
+                    <h2>Escolha o metodo de pagamento</h2>
+                    <div class="column">
+                        <button class="metodo" value="pix" onclick="removeClassPix(this.value)">PIX ou transferencia</button>
+                        <div class="pix hidden">
+                            <p>Efetuada a compra, você verá as informações de pagamento.</p>
+                        </div>                   
+                        <button class="metodo" value="cartao" onclick="removeClassCartao(this.value)">Cartao</button>
+                        <div class="cartao hidden">
+                            <p>Infelizmente, este metodo ainda nao esta disponivel.</p>
+                        </div>                          
+                    </div> 
+                </div>
+            </form>
+            <!-- mostra endereco colocado -->
+            <div class="endereco-de-envio">Confira o endereco de entrega</div>
+        </div>  
     </main>
 
     <!-- Fim do main -->
@@ -69,8 +88,8 @@
         </div>
 </footer>   
 <!-- Fim do footer -->
-    <script type="module" src="/js/jquery.js"></script>
-    <script type="module" src="/js/slick.min.js"></script>
+<!-- PIX -->
+    <script src="https://plugin.openpix.com.br/v1/openpix.js" async></script>
     <script type="text/javascript" src="/js/home.js"></script>
 </body>
 </html>
