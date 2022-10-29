@@ -76,7 +76,8 @@
                     </div>
                 </div>
                 <div class="submit-container">
-                    <button id="btnPagamento" class="submit-pedido" disabled="true" onclick="checarEIrParaPagamento()">Ir para pagamento</button>
+                    <button id="btnPagamento" class="submit-pedido" disabled="true" onclick="checkNumber()"><a id="btnPagamento" class="pagamentoNotAllowed" href="pagamento.html" disabled="true">Ir para pagamento</a></button>
+                    <!-- <button id="btnPagamento" class="submit-pedido" disabled="true" onclick="checkNumber()">Ir para pagamento</button> -->
                 </div>
             </form>
         </section>
@@ -117,8 +118,6 @@
         </div>
 </footer>   
 <!-- Fim do footer -->
-    <script type="module" src="/js/jquery.js"></script>
-    <script type="module" src="/js/slick.min.js"></script>
-    <script type="text/javascript" src="/js/home.js"></script>
+<script type="text/javascript" src="/js/home.js"></script>
 </body>
 </html>

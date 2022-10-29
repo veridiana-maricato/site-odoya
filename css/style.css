@@ -377,13 +377,15 @@ template {
   text-align: center;
   background-color: #175375;
   font-size: 20px;
-  font-weight: lighter; }
+  font-weight: lighter;
+  margin-top: 100px; }
   .depoimentos__titulo {
     color: #f8f4e3;
     text-transform: uppercase;
     margin-top: 50px; }
   .depoimentos__caixa {
-    padding-top: 40px; }
+    padding-top: 40px;
+    display: flex; }
   .depoimentos__item {
     display: flex;
     justify-content: center;
@@ -514,13 +516,71 @@ template {
   height: 24px; }
 
 .metodo {
-  max-height: 30vh; }
+  padding: 70px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; }
+  .metodo__title {
+    color: #175375;
+    margin-bottom: 50px;
+    text-transform: uppercase; }
+  .metodo__info {
+    background: linear-gradient(30deg, #468189, #77aca2);
+    margin-top: -10px;
+    color: #f8f4e3;
+    transition: opacity 1s ease-out;
+    height: 130px; }
+    @media (max-width: 576px) {
+      .metodo__info {
+        height: 150px; } }
+    @media (min-width: 992px) {
+      .metodo__info {
+        height: 110px; } }
+    .metodo__info__texto {
+      padding: 10px; }
+
+.btnMetodo {
+  background: linear-gradient(30deg, #175375, #468189);
+  color: #f8f4e3;
+  padding: 8px;
+  width: 100%; }
 
 .column {
   display: flex;
   flex-direction: column;
-  width: 500px;
-  gap: 10px; }
+  gap: 10px;
+  margin-left: 20%;
+  margin-right: 20%; }
+
+.continuar {
+  text-decoration: none;
+  color: #f8f4e3;
+  background: #175375;
+  padding: 6px;
+  width: 200px;
+  margin: 0 auto;
+  border: 1px solid #f8f4e3;
+  box-shadow: 1px 1px 3px #f8f4e3;
+  border-radius: 5px; }
+
+.continuar:hover {
+  scale: 1.1;
+  transition: all 200ms ease-in-out; }
+
+.endereco-de-envio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center; }
+
+.pagamentoNotAllowed {
+  text-decoration: none;
+  color: #f8f4e3;
+  cursor: none; }
+
+.cursorAllowed {
+  cursor: pointer; }
 
 .menu-principal {
   z-index: 1;
@@ -610,7 +670,7 @@ template {
     position: relative;
     max-width: 100%; }
   .cover__image--sobre {
-    background-image: url(/img/granola/com-flores.jpg);
+    background-image: url("/img/capa_mar.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left center;
@@ -638,8 +698,7 @@ template {
 .home-container {
   width: 100%;
   position: relative;
-  line-height: 30px;
-  margin-top: 100px; }
+  line-height: 30px; }
 
 .home-container img {
   width: 100%; }
@@ -689,13 +748,44 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 1100px;
+  height: 1400px;
   justify-content: space-between;
   margin-top: -25px;
   margin-bottom: 100px; }
 
 .sobre-home img {
   width: 700px; }
+
+.texto-home2 {
+  color: #f8f4e3;
+  background: #77aca2;
+  font-size: 25px;
+  text-align: center;
+  padding: 3px; }
+
+.texto-home3 {
+  color: #77aca2;
+  font-size: 18px;
+  text-align: center;
+  line-height: 60px; }
+
+.titulo-granola {
+  line-height: 40px;
+  font-size: 30px;
+  color: #175375;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center; }
+
+.texto-granola {
+  line-height: 30px;
+  font-size: 20px;
+  color: #175375;
+  margin-left: 200px;
+  text-align: justify;
+  margin-right: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px; }
 
 .receitas {
   display: flex;
@@ -910,6 +1000,14 @@ input:focus::-moz-placeholder {
 
 input:focus:-ms-input-placeholder {
   color: transparent; }
+
+.mensagem-compra {
+  color: #175375;
+  display: flex;
+  flex-direction: column;
+  padding-left: 150px;
+  padding-top: 50px;
+  padding-bottom: 50px; }
 
 /* Slider */
 .slick-slider {

@@ -10,16 +10,16 @@
 // }
 
 // jquery
-// $(document).ready(function(){
+$(document).ready(function(){
 
-//     // Slide depoimentos
-//     $('.depoimentos__caixa').slick({
-//         autoplay:true,
-//         arrows: false,
-//         dots: true,
-//         autoplaySpeed: 3000,
-//     });
-// })
+    // Slide depoimentos
+    $('.depoimentos__caixa').slick({
+        autoplay:true,
+        arrows: false,
+        dots: true,
+        autoplaySpeed: 3000,
+    });
+})
 
 function removeClass(value){
     if(value == 'Selecione'){
@@ -29,8 +29,11 @@ function removeClass(value){
     }
 }
 
+
 // CEP
+var endereco
 function buscaCep(){
+  
   var cep = document.querySelector('#txtCep').value;
   if(cep !==""){
       var url = "https://brasilapi.com.br/api/cep/v1/" + cep;
@@ -41,11 +44,13 @@ function buscaCep(){
       // resposta da requisicao
       req.onload = function() {
           if(req.status === 200){
-              var endereco = JSON.parse(req.response)
+              endereco = JSON.parse(req.response)
               document.querySelector('#txtRua').value = endereco.street;
               document.querySelector('#txtBairro').value = endereco.neighborhood;
               document.querySelector('#txtCidade').value = endereco.city;
-              document.querySelector('#txtEstado').value = endereco.state;
+              document.querySelector('#txtEstado').value = endereco.state;                    
+
+              localStorage.setItem('adress', endereco)
           }
           else if(req.status === 404){
               alert("CEP invalido!")
@@ -91,7 +96,7 @@ function checkMandatoryInputs(mandatoryInput) {
   // Ir para endereço
 
   function irParaEndereco(){
-    window.location.href = "/endereco.html"
+    window.location.href = "/endereco.html"  
   }
 
 
@@ -128,38 +133,45 @@ function removeClassCartao(value){
 
 
 
-// checar CPF ou CNPJ valido
+// checar numero do endereco e CPF ou CNPJ validos
 
-// Ir para pagamento
 function checkNumber(){
   let num = document.querySelector('#txtNumero').value
   if(num > 9999){
-     alert("Insira um número válido.")     
+     alert("Insira um número válido.")  
+     button.disabled = true;
+      return false   
+  }else{
+    checkDados()
   }
 }
 
 function checkDados(){
   var txtDados = document.querySelector('#dados').value
-  if(txtDados < 9999999999)
-   {
+  if(txtDados < 9999999999){
       alert("Por favor, informe um CPF ou CNPJ válido" );        
       button.disabled = true;
       return false
+}else{
+  checarEIrParaPagamento()
 }
 }
-  
+
+  // Ir para pagamento
+
 function checarEIrParaPagamento(){
-  checkDados();
-  checkNumber(); 
-  window.location.href('/pagamento.html') 
-   
+ document.querySelector("#btnPagamento").classList.add('cursorAllowed')
+
 }
 
 
+// conferir endereco
 
-
-
-
+// function retomarEndereco(){
+//   var enderecoEntrega = document.getElementById('endereco-texto-teste')
+//   enderecoEntrega.innerHTML = localStorage.getItem('adress')
+// }
+// retomarEndereco()
 
 
 

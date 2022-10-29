@@ -31,26 +31,30 @@
     <!-- Fim do header -->
     <!-- Main -->
     <main class="pagina-pagamento">
-        <div class="container">
+        
             <!-- metodos de pagamento -->
             <form action="#" class="pagamento">
                 <div class="metodo">
-                    <h2>Escolha o metodo de pagamento</h2>
+                    <h2 class="metodo__title">Escolha o metodo de pagamento</h2>
                     <div class="column">
-                        <button class="metodo" value="pix" onclick="removeClassPix(this.value)">PIX ou transferencia</button>
-                        <div class="pix hidden">
-                            <p>Efetuada a compra, você verá as informações de pagamento.</p>
+                        <button class="btnMetodo" value="pix" onclick="removeClassPix(this.value)">PIX ou transferencia</button>
+                        <div class="pix metodo__info hidden">
+                            <p class="metodo__info__texto">Efetuada a compra, você verá as informações de pagamento.</p>
+                            <a href="compra-realizada.html" class="continuar">Finalizar compra</a>
                         </div>                   
-                        <button class="metodo" value="cartao" onclick="removeClassCartao(this.value)">Cartao</button>
-                        <div class="cartao hidden">
+                        <button class="btnMetodo" value="cartao" onclick="removeClassCartao(this.value)">Cartao</button>
+                        <div class="cartao metodo__info hidden">
                             <p>Infelizmente, este metodo ainda nao esta disponivel.</p>
                         </div>                          
                     </div> 
                 </div>
             </form>
             <!-- mostra endereco colocado -->
-            <div class="endereco-de-envio">Confira o endereco de entrega</div>
-        </div>  
+            <!-- <div class="endereco-de-envio">
+                <h2 class="metodo__title">Confira o endereco de entrega</h2>
+                <div class="endereco-texto" id="endereco-texto-teste"></div>
+            </div> -->
+       
     </main>
 
     <!-- Fim do main -->
@@ -89,7 +93,6 @@
 </footer>   
 <!-- Fim do footer -->
 <!-- PIX -->
-    <script src="https://plugin.openpix.com.br/v1/openpix.js" async></script>
-    <script type="text/javascript" src="/js/home.js"></script>
+<script type="text/javascript" src="/js/home.js"></script>
 </body>
 </html>

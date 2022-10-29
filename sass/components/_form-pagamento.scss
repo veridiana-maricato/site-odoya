@@ -1,10 +1,80 @@
 .metodo{
-    max-height: 30vh;
+    padding: 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;   
+
+    &__title{
+        color: $cor-4;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+
+    }
+    &__info{
+        background: linear-gradient(30deg, $cor-3, $cor-2);
+        margin-top: -10px;
+        color: $cor-clara;
+        transition: opacity 1s ease-out;
+        height: 130px;  
+        
+        @media(max-width: $breakpoint-sm){
+            height: 150px;
+        }
+        @media(min-width: $breakpoint-lg){
+            height: 110px;
+        }
+
+        &__texto{
+            padding: 10px;
+        }
+    }
+}
+
+.btnMetodo{
+    background: linear-gradient(30deg, $cor-4, $cor-3);
+    color: $cor-clara;
+    padding: 8px;
+    width: 100%;
 }
 
 .column{
     display: flex;
+    flex-direction: column; 
+    gap: 10px;   
+    margin-left: 20%;
+    margin-right: 20%;   
+}
+
+.continuar{
+    text-decoration: none;
+    color: $cor-clara;
+    background: $cor-4;
+    padding: 6px;
+    width: 200px;
+    margin: 0 auto;
+    border: 1px solid $cor-clara;
+    box-shadow: 1px 1px 3px $cor-clara;
+    border-radius: 5px;
+}
+
+.continuar:hover{
+    scale: 1.1;
+    transition: all 200ms ease-in-out;
+}
+
+.endereco-de-envio{
+    display: flex;
     flex-direction: column;
-    width: 500px;
-    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pagamentoNotAllowed{
+    text-decoration: none;
+    color: $cor-clara;
+    cursor: none;
+}
+.cursorAllowed{
+    cursor: pointer;
 }

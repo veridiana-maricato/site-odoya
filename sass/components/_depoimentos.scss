@@ -4,6 +4,7 @@
     background-color: $cor-4;
     font-size: 20px;
     font-weight: lighter;
+    margin-top: 100px;
 
 
     &__titulo{
@@ -14,6 +15,7 @@
 
     &__caixa{
         padding-top: 40px;
+        display: flex;
     }
 
     &__item{
