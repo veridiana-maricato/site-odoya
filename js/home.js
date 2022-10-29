@@ -10,16 +10,16 @@
 // }
 
 // jquery
-$(document).ready(function(){
+// $(document).ready(function(){
 
-    // Slide depoimentos
-    $('.depoimentos__caixa').slick({
-        autoplay:true,
-        arrows: false,
-        dots: true,
-        autoplaySpeed: 3000,
-    });
-})
+//     // Slide depoimentos
+//     $('.depoimentos__caixa').slick({
+//         autoplay:true,
+//         arrows: false,
+//         dots: true,
+//         autoplaySpeed: 3000,
+//     });
+// })
 
 function removeClass(value){
     if(value == 'Selecione'){
@@ -96,7 +96,7 @@ function checkMandatoryInputs(mandatoryInput) {
   // Ir para endereço
 
   function irParaEndereco(){
-    window.location.href = "/endereco.html"  
+    window.location.replace("/endereco.html")    
   }
 
 

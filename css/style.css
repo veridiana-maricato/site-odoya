@@ -385,7 +385,8 @@ template {
     margin-top: 50px; }
   .depoimentos__caixa {
     padding-top: 40px;
-    display: flex; }
+    display: flex;
+    justify-content: space-around; }
   .depoimentos__item {
     display: flex;
     justify-content: center;
