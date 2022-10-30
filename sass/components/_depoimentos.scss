@@ -1,10 +1,12 @@
 .depoimentos{
     padding: 40px;
     text-align: center;
-    background-color: $cor-4;
     font-size: 20px;
     font-weight: lighter;
+    margin: 0 auto;
     margin-top: 100px;
+    position: relative;
+    background: $cor-4;
 
 
     &__titulo{
@@ -15,14 +17,26 @@
 
     &__caixa{
         padding-top: 40px;
+        overflow-x: auto;
+    }
+
+    &__lista{
         display: flex;
-        justify-content: space-around;
+        flex-flow: nowrap;
+        gap: 195px;
     }
 
     &__item{
         display: flex;
         justify-content: center;  
         flex-direction: column;
+        opacity: 0.5;
+        transition: all 400ms ease-in-out;
+
+        &__current{
+            opacity: 1;
+        }
+
 
         img{
             width: 150px;
@@ -50,3 +64,51 @@
     }
 }
 
+.arrow-left,
+.arrow-right{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    color: $cor-clara;
+    background: linear-gradient(to left, transparent 0%, $cor-1 200%) ;
+    border: none;
+    cursor: pointer;
+    opacity: 0.1;
+    transition: all 600ms ease-in-out;
+    width: 60px;
+    padding: 10px;
+}
+
+.arrow-right{
+    left: auto;
+    right: 0;
+    background: linear-gradient(to right, transparent 0%, $cor-1 200%) ;
+    border: none;
+}
+
+.arrow-left:hover{
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+.arrow-right:hover{
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+
+// HIDE SCROLL BAR
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: rgba($color:  $cor-clara, $alpha: 0.01);
+    
+}

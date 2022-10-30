@@ -13,6 +13,37 @@
     margin-left: 200px;
     text-align: justify;
     margin-right: 200px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+}
+
+.sabores{
+    line-height: 40px;
+    font-size: 21px;
+    color: $cor-4;
+    margin: 0 auto;
+    border: 2px solid $cor-4;
+    width: 400px;
+    text-align: center;
+}
+.imagem-sabores{
+    text-align: center;
+    margin-top: 140px;
+}
+.imagem-sabores img{
+    width: 100%;
+    margin: 0 auto
+}
+
+.texto-granola-titulo{
+    font-size: 30px;
+    color: $cor-4;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 80px;
+}
+
+.construcao{
+    margin: 100px;
+    color: $cor-4;
+    text-align: center;
 }
