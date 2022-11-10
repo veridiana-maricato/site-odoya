@@ -23,7 +23,15 @@
     &__lista{
         display: flex;
         flex-flow: nowrap;
-        gap: 195px;
+        gap: 1000px;
+        
+        
+        &__3em3{
+            gap: 300px;
+            display: flex;
+            justify-content: space-around;
+            width: 1800px;
+        }
     }
 
     &__item{

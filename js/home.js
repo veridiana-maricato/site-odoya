@@ -160,9 +160,9 @@ function checkDados(){
   // Ir para pagamento
 
 function checarEIrParaPagamento(){
- document.querySelector("#btnPagamento").classList.add('cursorAllowed')
+  window.location.href = '/pagamento.html' 
+  }
 
-}
 
 // DEPOIMENTOS
 const controls = document.querySelectorAll('.control');
